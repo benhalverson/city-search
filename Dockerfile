@@ -9,6 +9,7 @@ RUN npm i
 COPY . /app/
 RUN npm run build
 
+COPY build /app/build
 
 ARG PORT=${PORT}
 EXPOSE ${PORT} 
