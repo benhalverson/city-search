@@ -1,9 +1,11 @@
-import express, { Request, Response } from "express";
 import helmet from "helmet";
-import morgan from "morgan";
 import {config} from 'dotenv';
 import { geoapify } from './controllers/geoapify';
 import { getLocationGoogle } from './controllers/google';
+import type { Request, Response } from 'express';
+
+const express = require('express');
+const morgan = require('morgan');
 config();
 
 const app = express();
@@ -13,7 +15,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("dev"));
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (_: Request, res: Response) => {
   res.json({
     success: true,
     message: "UP",
