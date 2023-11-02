@@ -16,7 +16,7 @@
   "author": "Ben Halverson",
   "license": "ISC",
   "devDependencies": {
-    "@types/express": "^4.17.19",
+    "@types/express": "^4.17.20",
     "@types/morgan": "^1.9.6",
     "@types/node": "^20.8.6",
     "nodemon": "^3.0.1",
